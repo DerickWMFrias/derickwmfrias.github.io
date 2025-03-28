@@ -1,65 +1,69 @@
 /*Desktop*/
-body{
-    background-color: #dfe2b0f2;
+@media (min-width: 769px) {
+
+    body{
+        background-color: #dfe2b0f2;
+    }
+
+
+
+    #page-top{
+        min-height: 180px;
+        border-bottom: 1px solid black;
+    }
+
+    #head-memes-container{
+        min-height: 200px;
+    }
+
+    #welcome-text-container{
+        text-align: center;
+    }
+
+    #head-memes-div{
+        position: relative;
+        min-height: 150px;
+        padding-top: 30px;
+    }
+
+    #meme-im-this-old{
+        position: absolute;
+        left: 0;
+        padding-left: 13svw;
+    }
+
+    #meme-best-ie{
+        position: absolute;
+        left: 0;
+        padding-left: 55svw;
+    }
+    
+    #content-container {
+        display: flex;
+        border: 2px solid blue;
+    }
+
+    .grid-1{
+        display: flex;
+        flex: auto;
+    }
+
+    .column1 {
+        max-width: 58svw;
+        min-width: 500px;
+        flex-grow: 1;
+        border-right: 1px solid black;
+    }
+
+    .column2 {
+        max-width: 36svw;
+    }
+    /* Taken
+        height: 100vh; /* Full height of the viewport /
+        align-items: stretch; /* Ensures full height columns /
+    */
 }
 
-
-
-#page-top{
-    min-height: 180px;
-    border-bottom: 1px solid black;
-}
-
-#head-memes-container{
-    min-height: 200px;
-}
-
-#welcome-text-container{
-    text-align: center;
-}
-
-#head-memes-div{
-    position: relative;
-    min-height: 150px;
-    padding-top: 30px;
-}
-
-#meme-im-this-old{
-    position: absolute;
-    left: 0;
-    padding-left: 13svw;
-}
-
-#meme-best-ie{
-    position: absolute;
-    left: 0;
-    padding-left: 55svw;
-}
-
-#content-container {
-    display: flex;
-    border: 2px solid blue;
-}
-
-.grid-1{
-    display: flex;
-    flex: auto;
-}
-
-.column1 {
-    max-width: 58svw;
-    min-width: 500px;
-    flex-grow: 1;
-    border-right: 1px solid black;
-}
-
-.column2 {
-    max-width: 36svw;
-}
-/* Taken
-    height: 100vh; /* Full height of the viewport /
-    align-items: stretch; /* Ensures full height columns /
-*/
 
 
 
