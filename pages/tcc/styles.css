@@ -1,0 +1,19 @@
+/*Desktop*/
+@media (min-width: 769px){
+
+    #page-top{
+        min-height: 180px;
+        border-bottom: 1px solid black;
+    }
+
+    .div-desc-tcc{
+        margin-top: 12px;
+        max-width: 600px;
+    }
+}
+
+
+/*Mobile*/
+@media (max-width: 768px){
+    
+}

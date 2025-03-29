@@ -9,7 +9,6 @@
 
     #page-top{
         min-height: 180px;
-        border-bottom: 1px solid black;
     }
 
     #div-nav{
@@ -33,31 +32,9 @@
     .nav-link-div p{
         margin: 0;
     }
-    
-    #head-memes-container{
-        min-height: 200px;
-    }
 
     #welcome-text-container{
         text-align: center;
-    }
-
-    #head-memes-div{
-        position: relative;
-        min-height: 150px;
-        padding-top: 30px;
-    }
-
-    #meme-im-this-old{
-        position: absolute;
-        left: 0;
-        padding-left: 13svw;
-    }
-
-    #meme-best-ie{
-        position: absolute;
-        left: 0;
-        padding-left: 55svw;
     }
     
     #content-container {
