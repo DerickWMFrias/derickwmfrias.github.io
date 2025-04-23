@@ -5,7 +5,9 @@
         background-color: #dfe2b0f2;
     }
 
-
+    #none{
+        display: none;
+    }
 
     #page-top{
         min-height: 180px;
