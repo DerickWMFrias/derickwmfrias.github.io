@@ -33,25 +33,222 @@
 
     <main>
         <div id="div-conteudo">
+            <h3>
+                Aluno e Orientadores
+            </h3>
             <div class="div-desc-tcc">
-                Nome do Aluno: Dérick William de Moraes Frias
+                <p>
+                    Nome do Aluno: Dérick William de Moraes Frias
+                </p>
             </div>
             <div class="div-desc-tcc">
-                Orientador: Paulo Meirelles
+                <p>
+                    Orientador: Paulo Meirelles
+                </p>
             </div>
             <div class="div-desc-tcc">
-                Co-orientado: Arthur
+                <p>
+                    Co-orientado: Arthur Pilone
+                </p>
             </div>
-            <div class="div-desc-tcc">
-                Tema: aaaa
-            </div>
-            <div class="div-desc-tcc">
-                Descrição:
-            </div>
-            <div class="div-desc-tcc">
-                Atividades:
-            </div>
-        </div>    
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                Tema
+            </h3>
+            <p>
+                Estudo de engenharia de requisitos baseado em multidão a partir de comentários encontrados em redes sociais.
+            </p>
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                Contexto
+            </h3>
+            <p>
+                Aplicativos populares recebem a atenção de milhões de pessoas todos os dias, e proporcionam grandes desafios para os seus 
+                desenvolvedores. Um dos maiores desafios encontra-se na avaliação de requisitos para traçar a demanda dos usuários, definir 
+                ciclos de desenvolvimento, identificar bugs, entre outras coisas.	
+            </p>
+            <p>
+                Nesse ecossistema, os modelos de engenharia de requisitos baseados em multidão (crowdRE) optam por manter próximos dos times 
+                de desenvolvimento as opiniões dos usuários. A fim de alavancar o enorme potencial informativo contido nos comentários de usuários - 
+                com a finalidade de que times de desenvolvimento possam tomar decisões mais acertadas na identificação de problemas e de demandas 
+                para elaboração de issues - essa abordagem da engenharia de requisitos trabalha sobre a premissa de que as dores dos usuários com os 
+                aplicativos podem ser melhor entendidas estando em contato direto com eles, e de que o há um grande valor em orientar o desenvolvimento 
+                da sua aplicação pelas demandas dos usuários, já que são eles o público alvo. 
+            </p>
+            <p>
+                Pode existir grande valor a ser extraído de bons insights gerados a partir de comentários de usuários. Contudo, esse trabalho 
+                encontra barreiras quando tentamos escalá-lo. Por culpa do volume gigantesco de informações contidas na web - que faz que desde a 
+                obtenção dos dados em si até o tratamento de comentários acerca de grandes aplicativos seja impraticável para o trabalho de qualquer 
+                equipe de serem humanos, de forma eficiente - ainda encontra-se potencial para que os modelos de crowdRE sejam melhorados quando 
+                utilizados em trabalhos de grande escala.
+            </p>
+            <p>
+                Com a alavancada do poder computacional dos LLMs nos últimos anos, uma novo horizonte de oportunidades surgiu: Utilizar os embeddings de 
+                issues e de comentários de usuários nos LLMs para tentar traçar similaridades e gerar insights utilizáveis na engenharia de software. 
+                Estudos recentes vão nessa direção, incluindo pesquisas do grupo de sistemas do IME-USP, e exploram o território traçando com sucesso 
+                correlações fortes entre issues de desenvolvedores e comentários de usuários encontradas em lojas de aplicativos. Dentre tais estudos, 
+                foi desenvolvido um caso sobre o navegador Brave, onde mostrou-se que era possível encontrar comentários capturados em lojas de 
+                aplicativos com mais de 90% de similaridade com algumas issues de desenvolvedores, e que por vezes esses comentários forneciam 
+                informações extras que eram valiosas para os times de desenvolvimento.
+            </p>
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                Objetivos
+            </h3>
+            <p>
+                O objetivo deste trabalho é desenvolver um estudo completo de engenharia de requisitos baseado em multidão, montando cases de 
+                aplicativos, nos quais irei coletar na web - desenvolvendo meus próprios scripts de raspagem - tanto as resenhas de usuário 
+                quanto as issues de desenvolvedores, e utilizando os embeddings de um LLM para tentar fornecer insights valiosos para equipes de 
+                desenvolvedores a partir do grande volume de comentários de usuários.
+            </p>
+            <p>
+                Para isso, vamos trabalhar na coleta e tratamento de comentários de usuários extraídos não apenas de lojas de aplicativo, mas 
+                também de redes sociais. Num primeiro momento, estaremos interessados em retomar o caso de estudo do navegador Brave, desenvolvido 
+                pelo doutorando do Grupo de Sistemas de Software do IME-USP, Arthur Pilone (Vide https://www.linux.ime.usp.br/~artpilone/mac0499/). 
+                Desejamos estabelecer um paralelo com este trabalho anterior, comparando os resultados anteriormente obtidos com os comentários de 
+                app stores com os comentários vindos de redes sociais. Assim sendo, nosso trabalho também avaliará se é possível generalizar a 
+                abordagem anterior ao feedback de usuários vindo de diferentes plataformas. 
+            </p>
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                Metodologia
+            </h3>
+            <p>
+                Estudaremos quais as redes sociais que são interessantes de usarmos em nosso estudo. O 
+                pool inicial de redes sociais que estamos considerando é composto pelo: Twitter e Reddit.
+            </p>
+            <p>
+                Faremos uma avaliação da presença de aplicativos nestas redes sociais, levantando por exemplo: que tipo de perfis de aplicativos 
+                existem nessas redes; se são perfis oficiais ou não; se são perfis grandes ou não; se são ou não perfis ativos; se são perfis que 
+                recebem grande atenção pública; que tipo de comentários esses perfis recebem; quais dados podem ser extraídos de cada rede social.
+            </p>
+            <p>
+                Em seguida, readequaremos o estudo de caso do trabalho anterior para avaliar a viabilidade de se utilizar esses comentários de 
+                redes sociais para  complementar issues de desenvolvedores  com o aplicativo Brave. Acreditamos que esta primeira investigação revelará 
+                que comentários extraídos de redes sociais podem ser usados em análises capazes de produzir insights valiosos, o que serviria para 
+                justificar a investigação de novos casos de estudo.
+            </p>
+            <p>
+                Utilizaremos Python no desenvolvimento de scripts de raspagem para obtenção dos comentários de usuário vindos de diferentes 
+                fontes. Se possível, aproveitaremos APIs disponibilizadas por essas plataformas. Também desenvolveremos análises quantitativas acerca 
+                tanto dos dados obtidos por esses scripts quanto das sugestões de issues correspondentes encontradas para esses comentários.
+            </p>
+            <p>
+                As entregas serão feitas em sprints, com base no cronograma e no plano de atividades estabelecido aqui. A monografia será escrita com LaTeX, 
+                utilizando do template oficial dos trabalhos de conclusão do IME-USP.
+            </p>
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                Plano de Atividades: 
+            </h3>
+            <ol type="I">
+                <li>
+                    Num primeiro momento, buscaremos por redes sociais candidatas a serem as fontes dos dados raspados.
+                </li>
+
+                <li>
+                    Conduziremos um estudo exploratório nessas redes sociais, com objetivo de avaliar a viabilidade da obtenção de dados a partir de 
+                    cada uma delas, bem como as qualidades destes dados em cada rede social. Para isso faremos:
+                  <ol type="A">
+                    <li>
+                        Uma avaliação da presença de aplicativos nestas redes sociais, isto é por exemplo: que tipo de perfis existem; se são 
+                        perfis oficiais ou não; se são perfis grandes ou não; se são ou não perfis ativos; se são perfis que recebem grande atenção 
+                        pública.
+                    </li>
+
+                    <li>
+                        Uma avaliação qualitativa dos comentários e dos outros possíveis dados que possam ser extraídos de cada rede social fonte.
+                    </li>
+
+                    <li>
+                        A prototipação de um script de raspagem dessas redes sociais, escrito em Python, a fim de avaliar a viabilidade de extração 
+                        de dados dessas plataformas.
+                    </li>
+                  </ol>
+                </li>
+
+                <li>
+                    A partir desse estudo exploratório, produziremos um relatório para definir quais serão enfim as redes sociais definitivas 
+                    que serão objetos de nosso trabalho, e reabordaremos o estudo de caso do buscador Brave nesse novo contexto. 
+                </li>
+
+                <p>
+                    Com base nos resultados das atividades I, II e III, traçaremos o rumo futuro do projeto. Com a validação do estudo, nós:
+                </p>
+                <li>
+                    Encontraremos alguns aplicativos populares que satisfaçam os critérios necessários para que sirvam como de meu estudo. 
+                    Os critérios que precisam de ser cumpridos são:
+                    <ol type="A">
+                        <li>
+                            Aplicativos que possuam perfis nas redes sociais selecionadas para o estudo, e com a presença de muitos comentários.
+                        </li>
+                        <li>
+                            Aplicativos que possuam numerosas issues de desenvolvedores abertas, que possam ser encontradas em websites como o 
+                            GitHub ou o GitLab, que aglomeram essas informações, para que seus embeddings no LLM possam ser comparadas com os 
+                            embeddings dos comentários obtidos das redes sociais estudadas.
+                        </li>
+                        <li>
+                            Critérios adicionais para que considero para definir os aplicativos case para o estudo são: a qualidade das issues 
+                            encontradas (se são issues novas, se são postadas frequentemente, etc); Aplicativos que possuam suas issues num mesmo
+                            domínio (por exemplo, todas issues no GitLab). 
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    Para cada um dos cases definidos, iremos extrair as issues dos desenvolvedores e as resenhas de usuários, para que finalmente 
+                    possamos fazer os embeddings desses textos no LLM e estudar similitudes em suas métricas.
+                </li>
+
+                <li>
+                    Faremos então um estudo comparativo com os resultados obtidos, confrontando-os nas questões de pesquisa dos estudos anteriormente 
+                    desenvolvidos pelo nossos grupo de pesquisa por exemplo:
+                    <ol type="A">
+                        <li>
+                            Se a similaridade média dos comentários e das issues é maior ou menor do que as anteriormente encontradas? 
+                        </li>
+                        <li>
+                            Qual é a porcentagem de comentários úteis?
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    Para cada case, também farei um estudo quantitativo sobre os resultados obtidos a partir dos embeddings e das métricas estudadas.
+                </li>
+              </ol>
+        </div>
+
+        <div id="div-conteudo">
+            <h3>
+                CRONOGRAMA
+            </h3>
+            <p>
+                <b>Ciclo de entrega 1 - De 01/05 até 01/06: </b> Atividade I; Atividade II; Atividade III.
+            </p>
+            <p>
+                <b>Ciclo de entrega 2 - De 02/06 até 01/08: </b> Atividade IV; Atividade V.
+            </p>
+            <p>
+                <b>Ciclo de entrega 3 - De 02/08 até 01/09: </b> Atividade VI.
+            </p>
+            <p>
+                <b>Ciclo de entrega 4 - De 02/09 até 01/10: </b> Atividade VII.
+            </p>
+            <p>
+                <b>Ciclo de entrega 5 - De 02/10 até 01/12: </b> Entrega do TCC
+            </p>
+        </div>
     </main>
     
 

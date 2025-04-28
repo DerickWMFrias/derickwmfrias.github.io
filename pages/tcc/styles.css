@@ -10,10 +10,64 @@
         margin-top: 12px;
         max-width: 600px;
     }
+
+    #div-nav{
+        display: none;
+    }
+
+    #div-conteudo{
+        justify-items: left;
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+
+    p{
+        width: 80svw;
+        max-width: 900px;
+        text-align: justify;
+    }
+
+    li{
+        width: 70svw;
+        max-width: 800px;
+        text-align: justify;
+        margin-top: 10px;
+    }
 }
 
 
 /*Mobile*/
 @media (max-width: 768px){
-    
+    #page-top{
+        min-height: 180px;
+        border-bottom: 1px solid black;
+    }
+
+    .div-desc-tcc{
+        margin-top: 12px;
+        max-width: 600px;
+    }
+
+    #div-nav{
+        display: none;
+    }
+
+    #div-conteudo{
+        justify-items: left;
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+
+    p{
+        width: 80svw;
+        max-width: 900px;
+        text-align: justify;
+    }
+
+    li{
+        width: 70svw;
+        max-width: 800px;
+        text-align: justify;
+        margin-top: 10px;
+    }
 }
