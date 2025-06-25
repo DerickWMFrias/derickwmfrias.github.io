@@ -53,6 +53,21 @@
         margin: 0 auto;
         min-height: 600px;
     }
+
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        padding-top: 35px;
+        font-size: 24px;
+    }
+
+    .pcommtop{
+        padding-top: 15px;
+    }
+    .pdofim{
+        padding-bottom: 50px;
+    }
     /* Taken
         height: 100vh; /* Full height of the viewport /
         align-items: stretch; /* Ensures full height columns /

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Site</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div id="page-top">
+        <header>
+            <div id="div-header">
+                <div id="welcome-text-container">
+                    <h1>POSTS MAC0470</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Decoration bar  -->
+        <nav>
+            <div id="div-nav">
+                <h3>Navegação</h3>
+                <div class="nav-link-div">
+                    <p>*   <a href="../index.html"> << Voltar </a> </p>
+                </div>
+
+                <div class="nav-link-div">
+                    <p>*   <a href="../../../index.html"> HOME </a> </p> 
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <div id="content-container">
+        <div class="grid-1">
+            <div class="column1">
+                <h2>
+                    <it>Contribuição Git: </it> Diff driver para Javascript
+                </h2>
+                <a href="https://lore.kernel.org/git/20250604094100.80598-1-derick.william.moraes@gmail.com/T/#t">Link da contribuição</a>
+                <p>
+                    Minha segunda contribuição é um diff driver utilizado pelo comando 'git diff' para identificar funções e tokens de um código fonte em alguma linguagem de programação.
+                </p>
+                <p>
+                    Para contextualizar, temos que discutir primeiro um pouco do que faz o comando 'git diff'; quando rodamos 'git diff', um dos passos executados é o de inicializam um struct específico de acordo com uma definição de um PATTERN, feita no arquivo 'userdiff.c'. 
+                    Também nesse arquivo estão declarados os PATTERNS aceitados. A definição de um PATTERN para uma linguagem de programação incluí 3 strings: O nome do pattern - convencionado a ser o nome da linguagem que o PATTERN reconhece; uma regex que 
+                    reconhece a definição de funções dentro de arquivos fonte da linguagem, e uma regex que identifica tokens dentro daquela linguagem de programação.
+                </p>
+                <p>
+                    Vejamos abaixo a declarados da definição de PATTERN, e um exemplo de declaração de PATTERN para a linguagem de programação C++.
+                </p>
+                <img src="imgs/1.png">
+                <img src="imgs/2.png">
+                <p>
+                    Uma das primeiras coisas que estranhei quando comecei a trabalhar nesse problema foi que a linguagem Javascript é uma das mais populares do mundo, e mesmo assim não estava ainda suportada.
+                    Todas as outras linguagens "populares" paracem ja ter suporte (C/C++, C#, Java, Go, Ruby, Swift, Rust, Bash, Python, etc...), de forma que não consegui notar nenhuma outra que não tivesse um PATTERN implementado.
+                </p>
+                <p>
+                    Pensei logo então em procurar por tentativas antigas de contribuição ao Git para esse problema; na <a href="https://lore.kernel.org/git/"> Lore do Git </a>, é possível acessar antigos emails e discussões da lista, e filtar por palavras e tags específicas. 
+                    Esse recurso foi indispensável para que a contribuição tivesse rumo! Em minha pesquisa, encontrei duas contribuições passadas notórias, mas que não vieram a cabo, <a href="">aqui</a> e <a href="">aqui</a>.
+                </p>
+                <p>
+                    Outra coisa muito útil de usar a Lore é poder aprender com as dores de desenvolvedores anteriores. Por exemplo, percebi que os mantenedores do repositório são bastante criteriosos com questões como estilo de código, mensagens de commit, modo verbal das mensagens de commit.
+                    Também é possível encontrar conselhos como não tentar resolver muitos problemas de uma vez só, apenas porque parecem que podem ser resolvidos todos de uma vez.
+                </p>
+                <p>
+                    A linguagem javascript tem uma sintaxe muito flexível. Funções podem ser declaradas em vários contextos: No escopo global, dentro de classes ou objetos, sendo atribuídas à variáveis, ou como callback.
+                    Também há vários tipos de funções: funções "tradicionais" (funções nomeadas, declaradas e não atribuídas), funções anônimas (literalmente, que não tem nome, declaradas por exemplo em callback), arrow functions, 
+                    funções geradoras (declaradas com function* | function *), funções assíncronas (prefixadas por async) e IIFEs. Importante destacar que existe uma relação complexa entre os escopos possíveis de declaração para cada tipo de função em javascript, por exemplo,
+                    IIFEs não podem ser declaradas no corpo de uma classe.
+                    
+                    Para além disso, javascript é talvez a linguagem moderna com mais "dialetos". Um muito popular por exemplo é o Typescript, que é entendido até como uma nova linguagem. Contudo, diversas ferramentas implementam keywords customizadas
+                    e/ou permitem declaração de funções em contextos diversificados, de forma que cobrir esses dialetos de forma exaustiva com um só PATTERN talvez seja impossível. 
+                </p>
+                <p>
+                    Minha abordagem então precisei tomar uma decisão de escopo; decidi ser vanilla-javascript-first. Isso quer dizer que meu pattern se preocupa com as declarações de funções e tokens do javascript como definido no ECMAScript. 
+                    Possivelmente então algum feature em React não seja descoberto, mas acredito que isso seja o melhor por atacar o "todo", que é fortemente compartilhado pelas tecnologias do ecossistema javascript.
+                </p>
+                <p>
+                    Abaixo está a implementação do PATTERN que desenvolvi para javascript:
+                </p>
+                <img src="imgs/3.png">
+                <p>
+                    A contribuição ainda está rolando, então ainda vou debater mais com desenvolvedores.
+                </p>
+            </div>
+    </div>
+
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

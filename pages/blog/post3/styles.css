@@ -40,29 +40,17 @@
     #content-container {
         border-top: 1px solid black;
         margin-top: 15px;
-        display: flex;
-    }
-
-    #meme-rpg {
-        display: none;
-        margin-top: 10px;
+        display: block;
     }
 
     .grid-1{
-        display: flex;
-        flex: auto;
+        display: block;
     }
 
     .column1 {
         max-width: 58svw;
         min-width: 500px;
-        flex-grow: 1;
-        min-height: 600px;
-    }
-
-    .column2 {
-        margin-left: 40px;
-        max-width: 36svw;
+        margin: 0 auto;
         min-height: 600px;
     }
     /* Taken
