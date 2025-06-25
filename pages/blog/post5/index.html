@@ -37,17 +37,26 @@
         <div class="grid-1">
             <div class="column1">
                 <h2>
-                    Contribuição Parte 1 - Linux 
+                    Contribuição Parte 1 - Kernel: Adição de prefixos para funções da DMR para debug com ftrace 
                 </h2>
                 <p>
-                    O tutorial dessa semana foi para criar um character driver na IIO. Pelo que entendi, chacacter devices são partes do S.O que 
-                    permitem ao usuário interagir com o hardware à nivel de código. A tarefa foi criar o driver - simple_char!
+                    Minha primeira contribuição para a disciplina foi a edição do nome de funções dentro do diretório de drivers do subsistema DRM do Kernel, para melhorar o funcionamento do Function Tracer (ftrace) do Kernel. 
+                    Numa das aulas obtive a sugestão da contribuição pelo pad da disciplina, e então passei a estudar com minha dupla para encontrar algum código que pudesse ser otimizado.
                 </p>
                 <p>
-                    Esse foi o primeiro tutorial que terminei durante a aula! Acabou que ele foi bem rápido também, tive bastante tempo
-                    restante e fiquei conversando com o Leo sobre o conteúdo. Uma das coisas que apareceu nesse tutorial foram as funções de 
-                    write() e read(). Eu já tinha trabalhado em EPs com essas funções antes, e passei algum tempo explicando pro Leo sobre o funcionamento delas,
-                    sobre os SEEKs e especulando o que elas cumpriam dentro desse algoritmo.
+                    O melhor funcionamento do ftrace depende do match entre os nomes dos arquivos .c do Kernel e dos prefixos das funções dentro desses arquivos. A partir da sugestão e buscando 
+                    na DRM, encontramos alguns diretório dentro de 'drm/amd/display/dc' que continham funções cujos prefixos não davam match com o nome dos arquivos.
+                </p>
+                <img src="imgs/2.png" style="width:800px; height:450px;">
+
+                <p style="margin-top: 50px;">
+                    Parte do diff do patch:
+                </p>
+                <img src="imgs/1.png" style="width:1000px; height:700px;">
+
+                <h3>Resultado da contribuição</h3>
+                <p style="margin-bottom: 100px;">
+                    No final, a contribuição infelizmente foi recusada. O mantenedor Alex Hung rejeitou o patch e esclareceu que alguns testes dentro do Kernel dependem dos nomes originais das funções.
                 </p>
             </div>
         </div>
